@@ -6,10 +6,12 @@ The TSO GIT utility is a Set if REXX panels which issues JCL to perform basic GI
 - User has access to write to HLQ.
 - Program name is needed to change to the correct directory for copy.
 - User can't switch between branches in the same repo.
-- User has completed the TSO GITSETUP, SSH key setup and is a member of MFCDUSR to access GIT commands and GIT Repos from Mainframe.
+- User has completed the TSO GITSETUP with does setup of Git for z/OS environment variables in the users .profile
+- SSH key creation will email users their public key which must be added to the users GitLab profile.
+- SSH key validation will test the key against GitLab.
 - PDSs are deleted and reallocated everytime a new clone is performed to avoid mixing up artifacts from different repos.
 - The advanced GIT option screen brings up JCL skeletons for the user to edit and submit.
-- The GIT workspace is the users home directory on USS (u/alias/$gitproject/$program/..) 
+- The GIT workspace is the users home directory on USS (u/<user-alias>/$gitproject/$program/..) 
 - Git command line can be used directly against the users repo using OMVS or Putty 
 
 ##### GIT CLONE 
